@@ -1,1 +1,14 @@
 <h1>Kitchens#index</h1>
+
+  <div id="kitchens">
+    <% @kitchens.each do |kitchen| %>
+    <div class="kitchen">
+        <%= render kitchen %>
+    </div>
+    <% end %>
+
+  </div>
+
+<div class="btn">
+  <%= link_to "+ New kitchen", new_kitchen_path, class:"button" %>
+</div>
