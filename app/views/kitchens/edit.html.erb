@@ -1,1 +1,7 @@
 <h1>[Edit] <%= @kitchen.name%></h1>
+
+<%= render "form", kitchen: @kitchen %>
+
+  <div>
+    <%= link_to "Back to kitchens", kitchen_path %>
+  </div>

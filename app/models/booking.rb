@@ -1,6 +1,7 @@
 class Booking < ApplicationRecord
-  belongs_to :kitchen, :user
+  belongs_to :kitchen
+  belongs_to :user
   # owner
-  belongs_to :owner, through: :kitchens, source: :users
-  validates :total_price, :date, presence: true
+  # belongs_to :owner, through: :kitchens, source: :users
+  validates :total_price, presence: true
 end

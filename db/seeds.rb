@@ -10,6 +10,7 @@
 
 Booking.destroy_all
 Kitchen.destroy_all
+
 User.destoy_all
 
 # 2-3 user
@@ -17,3 +18,10 @@ User.destoy_all
 # 4 kitchen appliances
 
 # 2 bookings
+
+
+
+
+user = User.create(email: "abc@gmail.com", password: "1234567")
+kitchen = Kitchen.create(name: "ABC", availiability: true, description: "shdhhd", user: user, price: 40)
+Booking.create!(start_date: Date.today, end_date: Date.tomorrow, total_price: 100, user: user, kitchen: kitchen)
