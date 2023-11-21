@@ -1,6 +1,6 @@
 class KitchensController < ApplicationController
   before_action :set_kitchen, only: %i[show edit update destroy]
-  skip_before_action :authenticate_user! #, only: [:index, :show, :new]
+  skip_before_action :authenticate_user!, only: [:index, :show, :new]
 
   # GET /kitchens
   def index
@@ -23,9 +23,11 @@ class KitchensController < ApplicationController
   # POST /kitchens
   def create
     @kitchen = Kitchen.new(kitchen_params)
+    # save user of kitchen appliance as current user
+    @kitchen.user = current_user
+    if @kitchen.save! # ! stop execution @ prob
 
-    if @kitchen.save
-      redirect_to @kitchen, notice: 'kitchen was successfully created.'
+      redirect_to kitchen_path(@kitchen), notice: 'your kitchen appliance was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -53,6 +55,6 @@ class KitchensController < ApplicationController
   end
 
   def kitchen_params
-    params.require(:kitchen).permit(:name, :price, :availiability)
+    params.require(:kitchen).permit(:name, :price, :start_date, :end_date, :availiability, :description)
   end
 end
