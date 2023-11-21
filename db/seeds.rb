@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Booking.destroy_all
+Kitchen.destroy_all
+User.destoy_all
+
+# 2-3 user
+
+# 4 kitchen appliances
+
+# 2 bookings
