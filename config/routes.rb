@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: %i[destroy]
 
-  devise_for :users
-  
+    devise_for :users
+    resources :bookings do
+    resources :reviews, only: [:new]
+    end
   # root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
