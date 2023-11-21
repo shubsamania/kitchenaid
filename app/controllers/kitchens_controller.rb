@@ -1,5 +1,6 @@
 class KitchensController < ApplicationController
   before_action :set_kitchen, only: %i[show edit update destroy]
+  skip_before_action :authenticate_user! #, only: [:index, :show, :new]
 
   # GET /kitchens
   def index
