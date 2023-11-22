@@ -4,3 +4,4 @@
   <p> Price: <%=@booking.kitchen.price%>€/ day </p>
   <p> Total Price: €<%=@total_price%> </p>
 </div>
+<%= link_to "Leave a review", new_booking_review_path(@booking), class: "btn btn-secondary" %>
