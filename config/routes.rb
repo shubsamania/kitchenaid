@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   root "kitchens#index"
-  
+
   resources :kitchens do
     resources :bookings, only: %i[create]
   end
   resources :bookings, only: %i[destroy]
   resources :bookings, only: %i[create] do
-    resources :reviews, only: [:new]
+    resources :reviews, only: [:new, :create]
   end
 
     devise_for :users
