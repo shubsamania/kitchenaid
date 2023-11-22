@@ -3,7 +3,7 @@
   <div id="kitchens">
     <% @kitchens.each do |kitchen| %>
     <div class="kitchen">
-        <%= render kitchen %>
+        <%= render "kitchens/kitchen", kitchen: kitchen %>
     </div>
     <% end %>
 
