@@ -1,6 +1,6 @@
 class KitchensController < ApplicationController
   before_action :set_kitchen, only: %i[show edit update destroy]
-  skip_before_action :authenticate_user!, only: [:index, :show, :new]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   # GET /kitchens
   def index
@@ -16,7 +16,6 @@ class KitchensController < ApplicationController
 
   # GET /kitchens/1
   def show
-    @booking = Booking.new
   end
 
   # GET /kitchens/new
@@ -62,6 +61,6 @@ class KitchensController < ApplicationController
   end
 
   def kitchen_params
-    params.require(:kitchen).permit(:name, :price, :start_date, :end_date, :availiability, :description)
+    params.require(:kitchen).permit(:name, :price, :start_date, :end_date, :availiability, :description, :photo)
   end
 end
