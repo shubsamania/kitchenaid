@@ -1,8 +1,6 @@
-<h1> You are booking the <%= @kitchen.name %></h1>
-
-<%= simple_form_for([@kitchen, @booking]) do |f| %>
-  <%= f.input :total_price %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit %>
-<% end %>
+<p style="color: green"> You booked the <%= @booking.kitchen.name %></p>
+<div class="card">
+  <h3> <%=@booking.kitchen.name%></h3>
+  <p> Price: <%=@booking.kitchen.price%>€/ day </p>
+  <p> Total Price: €<%=@total_price%> </p>
+</div>

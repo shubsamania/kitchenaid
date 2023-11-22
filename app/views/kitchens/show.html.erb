@@ -10,5 +10,7 @@
   <%= link_to "Edit this kitchen", edit_kitchen_path(@kitchen) %> |
   <%= link_to "Back to kitchens", kitchens_path %>
 
+  <%= link_to "Rent Now", new_kitchen_booking_path(@kitchen), class: "btn btn-primary" %>
+
   <%= button_to "Destroy this kitchen", @kitchen, method: :delete %>
 </div>
