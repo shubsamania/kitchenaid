@@ -1,3 +1,24 @@
+<%# Route: kitchens/:id/bookings/new %>
 <h1>Bookings#new</h1>
 <p>Find me in app/views/bookings/new.html.erb</p>
 
+<%= form_with(model: @booking, url: kitchen_bookings_path(@kitchen), method: :post) do |form| %>
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.date_field :start_date, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.date_field :end_date, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message, "Message to Owner" %>
+    <%= form.text_area :message, class: "form-control", rows: 4 %>
+  </div>
+
+  <%= form.submit "Submit", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Back", kitchen_path(@kitchen), class: "btn btn-secondary" %>

@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   resources :kitchens do
-    resources :bookings, only: %i[create]
+    resources :bookings, only: %i[new create show]
   end
-  resources :bookings, only: %i[destroy]
+
+  # resources :bookings, only: %i[destroy new create]
+
   resources :bookings, only: %i[create] do
     resources :reviews, only: [:new]
   end
 
-    devise_for :users
+  devise_for :users
 
 
   # root to: "pages#home"
