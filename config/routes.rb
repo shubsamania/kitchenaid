@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "kitchens#index"
+  
   resources :kitchens do
     resources :bookings, only: %i[create]
   end
