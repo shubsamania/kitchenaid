@@ -1,7 +1,7 @@
 <h1>Share your opinion!</h1>
 
-<%= simple_form_for([@booking, @review]) do |f| %>
-  <%= f.input :comment %>
-  <%= f.input :rating %>
+<%= simple_form_for [@booking, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating, :collection => %w[0 1 2 3 4 5] %>
   <%= f.submit %>
 <% end %>
