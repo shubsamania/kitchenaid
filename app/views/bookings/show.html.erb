@@ -1,7 +1,10 @@
 <p style="color: green"> You booked the <%= @booking.kitchen.name %></p>
+
 <div class="card">
   <h3> <%=@booking.kitchen.name%></h3>
+  <%# price per day %>
   <p> Price: <%=@booking.kitchen.price%>€/ day </p>
+  <%# total-price %>
   <p> Total Price: €<%=@total_price%> </p>
 </div>
 <%= link_to "Leave a review", new_booking_review_path(@booking), class: "btn btn-secondary" %>
