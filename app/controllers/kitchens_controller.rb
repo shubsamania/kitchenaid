@@ -16,6 +16,7 @@ class KitchensController < ApplicationController
 
   # GET /kitchens/1
   def show
+    @booking = Booking.new
   end
 
   # GET /kitchens/new

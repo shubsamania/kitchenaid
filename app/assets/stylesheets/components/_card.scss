@@ -1,6 +1,30 @@
 .card {
   border: 1px solid;
-  border-radius: 20px;
-  padding: 10px;
+  border-color: $very-light;
+  border-radius: 20px !important;
+  padding: 0px;
   display: flex;
+  margin: 10px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.card-title {
+  font-weight: 700 !important;
+  margin-left: 10px;
+}
+
+.card-body {
+  padding: 10px !important;
+}
+
+#price {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.card-img-top {
+  height: 200px;
+  border-radius: 10px;
 }

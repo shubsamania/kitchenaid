@@ -1,4 +1,8 @@
-.button{
+.button {
   border-radius: 20px;
-  color: black;
+  background-color: $dark;
+}
+
+.button:hover {
+  background-color: $light;
 }
