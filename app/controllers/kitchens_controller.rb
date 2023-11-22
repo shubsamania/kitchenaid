@@ -5,6 +5,13 @@ class KitchensController < ApplicationController
   # GET /kitchens
   def index
     @kitchens = Kitchen.all
+    # The `geocoded` scope filters only flats with coordinates
+    # @markers = @kitchens.geocoded.map do |kitchen|
+    #   {
+    #     lat: kitchen.latitude,
+    #     lng: kitchen.longitude
+    #   }
+    # end
   end
 
   # GET /kitchens/1
@@ -26,7 +33,6 @@ class KitchensController < ApplicationController
     # save user of kitchen appliance as current user
     @kitchen.user = current_user
     if @kitchen.save! # ! stop execution @ prob
-
       redirect_to kitchen_path(@kitchen), notice: 'your kitchen appliance was successfully created.'
     else
       render :new, status: :unprocessable_entity
