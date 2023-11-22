@@ -1,1 +1,8 @@
 <h1> You are booking the <%= @kitchen.name %></h1>
+
+<%= simple_form_for([@kitchen, @booking]) do |f| %>
+  <%= f.input :total_price %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit %>
+<% end %>
