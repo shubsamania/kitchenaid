@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    @kitchen = @booking.kitchen
     start_date = @booking.start_date
     end_date = @booking.end_date
     # Calculate the difference in days
