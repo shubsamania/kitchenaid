@@ -1,10 +1,18 @@
 <p style="color: green"> You booked the <%= @booking.kitchen.name %></p>
 
-<div class="card">
-  <h3> <%=@booking.kitchen.name%></h3>
-  <%# price per day %>
-  <p> Price: <%=@booking.kitchen.price%>€/ day </p>
-  <%# total-price %>
-  <p> Total Price: €<%=@total_price%> </p>
-</div>
+<%= link_to "← go back", kitchens_path, class:"link" %>
+
+  <div class="background">
+    <div class="new-container">
+    <%= cl_image_tag @kitchen.photo.key%>
+      <div class="text-container">
+        <h3> <%=@booking.kitchen.name%></h3>
+        <%# price per day %>
+        <p> Price: <%=@booking.kitchen.price%>€/ day </p>
+        <%# total-price %>
+        <p> Total Price: €<%=@total_price%> </p>
+      </div>
+    </div>
+  </div>
+
 <%= link_to "Leave a review", new_booking_review_path(@booking), class: "btn btn-secondary" %>
