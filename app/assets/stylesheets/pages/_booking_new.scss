@@ -1,17 +1,32 @@
 .border{
-  border-radius: 20px;
-  background-color: #EFE1D1;
+  margin-top: 20px;
 }
 
 .item-container{
+  margin-top: 20px;
   border-radius: 20px;
-  margin-bottom: 50px;
-  padding: 20px;
-  img{
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  text-align: start;
+  align-items: top;
+  flex-direction: column;
+  img {
     margin-right: 20px;
     border-radius: 12px;
-    width: 140px;
+    width: 160px;
+    margin-right: 10px;
   }
+  .item-body{
+    text-align: start;
+    margin-left: 5px;
+    padding: 0px;
+  }
+}
+
+h3 {
+  margin: 0; /* Remove default margin for h3 to avoid extra space */
 }
 
 .kitchen-container{
@@ -19,11 +34,21 @@
   border-radius: 20px;
 }
 
+.divider{
+  height: 1px; /* Set the height of the divider */
+  background: linear-gradient(to right, transparent, #e0e0e0, transparent); /* Use a linear gradient for the fade effect */
+  margin: 5px 0;
+  margin-bottom: 20px;
+}
+
 .owner-card{
   display: flex;
   justify-content: left;
-  padding: 20px;
-  img{
+  padding: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -32,17 +57,44 @@
 }
 
 .info-container{
-  background-color: white;
+  display: flex;
+  // flex-direction: column;
   border-radius: 20px;
   padding: 20px;
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-around;
   align-items: flex-start;
 }
 
 
 .booking-container{
-  background-color: #EFE1D1;
+  background-color: white;
   border-radius: 20px;
   padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  margin-bottom: 20px;
+  margin: 10px;
+}
+
+.reviews-container{
+  margin-top: 50px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.review-content{
+  width: 80%;
+  border-radius: 12px;
+  display: block;
+  align-items: center;
+
+  .rating{
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+
+  .content{
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
 }
