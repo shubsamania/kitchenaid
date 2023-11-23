@@ -1,8 +1,48 @@
-.booking-container{
-  background-color: #F2FFE9;
+.border{
+  border-radius: 20px;
+  background-color: #EFE1D1;
+}
+
+.item-container{
+  border-radius: 20px;
+  margin-bottom: 50px;
+  padding: 20px;
+  img{
+    margin-right: 20px;
+    border-radius: 12px;
+    width: 140px;
+  }
+}
+
+.kitchen-container{
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.owner-card{
+  display: flex;
+  justify-content: left;
   padding: 20px;
   img{
     border-radius: 50%;
-    width: 40px;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
   }
+}
+
+.info-container{
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+
+.booking-container{
+  background-color: #EFE1D1;
+  border-radius: 20px;
+  padding: 20px;
 }
