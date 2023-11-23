@@ -12,6 +12,9 @@ class KitchensController < ApplicationController
     #     lng: kitchen.longitude
     #   }
     # end
+    if params[:query].present?
+    @kitchens = @kitchens.where(tag: params[:query])
+    end
   end
 
   # GET /kitchens/1
