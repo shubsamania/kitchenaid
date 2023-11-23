@@ -5,6 +5,7 @@ class KitchensController < ApplicationController
   # GET /kitchens
   def index
     @kitchens = Kitchen.all
+    @booking = Booking.new
     # The `geocoded` scope filters only flats with coordinates
     # @markers = @kitchens.geocoded.map do |kitchen|
     #   {
@@ -21,6 +22,14 @@ class KitchensController < ApplicationController
   # changed here !
   def show
     @booking = Booking.new
+    @review = Review.new
+    ratings = []
+    @kitchen.reviews.each do |review|
+      ratings << review.rating
+    end
+    sum_ratings = ratings.sum
+    number_of_ratings = ratings.count
+    @total_rating = sum_ratings / number_of_ratings
   end
 
   # GET /kitchens/new
