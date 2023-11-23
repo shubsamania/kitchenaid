@@ -1,5 +1,33 @@
-<h1>Kitchens#index</h1>
+<%# Categories %>
+<div class="categories col-6">
+  <%# Category 1 %>
+  <div class="category">
+    <img class="category_pic" src="<%= asset_url("backen.png")%>">
+    <p class="category_name">Food Preparation</p>
+  </div>
+  <%# Category 2 %>
+  <div class="category">
+    <img class="category_pic" src="<%= asset_url("gerat.png")%>">
+    <p class="category_name">Cooking Appliances</p>
+  </div>
+  <%# Category 3 %>
+  <div class="category">
+    <img class="category_pic" src="<%= asset_url("grill.png")%>">
+    <p class="category_name">Outdoor Cooking</p>
+  </div>
+  <%# Category 4 %>
+  <div class="category">
+    <img class="category_pic" src="<%= asset_url("grill.png")%>">
+    <p class="category_name">Outdoor Cooking</p>
+  </div>
+  <%# Category 5 %>
+  <div class="category">
+    <img class="category_pic" src="<%= asset_url("grill.png")%>">
+    <p class="category_name">Outdoor Cooking</p>
+  </div>
+</div>
 
+<%# Elements %>
 <div id="kitchens" class="row">
   <% @kitchens.each do |kitchen| %>
     <div class="col-md-3 mb-3">
@@ -10,8 +38,9 @@
       <img src="https://picsum.photos/200/300" class="card-img-top img-fluid" alt="Kitchen Image">
       <% end %>
         <div class="card-body">
+            <p id="price">€<%= kitchen.price%>/ day</p>
           <h5 class="card-title">
-            <%= link_to kitchen.name, kitchen, style: "color: black", class: " text-decoration-none link" %>
+            <%= link_to kitchen.name, kitchen, style: "color: black", class: "text-decoration-none" %>
           </h5>
           <p class="card-text">
             <%= kitchen.description %>
@@ -20,8 +49,4 @@
       </div>
     </div>
   <% end %>
-
-  <div class="btn btn-primary">
-  <%= link_to "+ New kitchen", new_kitchen_path, class: "button white-text", style: "color: white;" %>
-</div>
 </div>

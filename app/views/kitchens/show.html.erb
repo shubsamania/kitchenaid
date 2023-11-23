@@ -1,18 +1,34 @@
-<h1><%= @kitchen.name%></h1>
-
-
 <p style="color: green"><%= notice %></p>
 
+<%= link_to "← go back", kitchens_path, class:"link" %>
 
-
-
+<%# Kitchen Info %>
 <div class="card">
-  <%= link_to "Edit this kitchen", edit_kitchen_path(@kitchen) %> |
-  <%= link_to "Back to kitchens", kitchens_path %>
+  <h1 class="card-title">
+    <%= @kitchen.name%>
+  </h1>
+  <p class="card-body">
+    <%=@kitchen.description %>
+    €<%= @kitchen.price%>/day
+  </p>
+    <%# <%= @kitchen.pic %>
+</div>
 
-  <%= link_to "Rent Now", new_kitchen_booking_path(@kitchen), class: "btn btn-primary" %>
+<%= link_to "Rent Now", new_kitchen_booking_path(@kitchen), id:"rent_bnt", class:"btn button" %>
 
-  <%= button_to "Destroy this kitchen", @kitchen, method: :delete %>
+<%# Reviews %>
+<div class="card">
+  <h1 class="card-title">
+    Reviews
+  </h1>
+  <p class="card-body">
+    <%@kitchen.reviews.each do |review| %>
+    <div>
+      <%= review.content %>
+      <%= review.rating %>
+    <%end%>
+    </div>
+  </p>
 </div>
 
 <h1>Reviews</h1>

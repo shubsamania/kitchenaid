@@ -1,22 +1,46 @@
 <%# Route: kitchens/:id/bookings/new %>
+<%= link_to "← go back", kitchens_path, class:"link" %>
+
 <h1>Make a booking</h1>
 <%# <p>Find me in app/views/bookings/new.html.erb</p> %>
-<div class="booking-container">
-  <div class="container">
-    <div class="d-flex justify-content-between">
-    <div>
-      <%= image_tag "logo.png" %>
+<div class="border">
+  <div class="d-flex justify-content-around">
+
+  <div class="kitchen-container">
+    <div class="item-container">
+      <div class="info-container">
+        <%= image_tag "logo.png" %>
+        <div>
+          <h3><%= @kitchen.name %></h3>
+          <p>Rating: ⭐️ /5</p>
+          <ul>
+            <li>detail 1</li>
+            <li>detail 2</li>
+          </ul>
+        </div>
+      </div>
     </div>
+      <div class="owner-card">
+        <%= image_tag "logo.png" %>
+        <div>
+          <p>Owner Name</p>
+          <p>⭐️ /5</p>
+        </div>
+      </div>
+  </div>
+
+  <div class="booking-container">
       <div>
         <%= simple_form_for [@kitchen, @booking] do |form| %>
             <%= form.input :start_date %>
             <%= form.input :end_date %>
             <%= form.input :message %>
-          <%= form.submit "Submit", class: "btn btn-primary" %>
+          <%= form.submit "Rent Now", class: "btn btn-primary" %>
         <% end %>
 
-        <%= link_to "Back", kitchen_path(@kitchen), class: "btn btn-secondary" %>
+        <%# <%= link_to "Go Back To Overview", kitchen_path(@kitchen), class: "btn btn-secondary" %>
       </div>
     </div>
   </div>
+
 </div>
