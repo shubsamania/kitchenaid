@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
     @booking = Booking.find(params[:booking_id])
     @review.booking_id = @booking.id
     if @review.save!
-      redirect_to kitchen_booking_path(@booking.kitchen_id, @booking.id)
+      redirect_to kitchen_path(@booking.kitchen_id, @booking.id)
     else
       render :new, status: :unprocessable_entity
     end

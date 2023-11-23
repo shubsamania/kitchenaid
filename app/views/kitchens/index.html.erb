@@ -32,7 +32,11 @@
   <% @kitchens.each do |kitchen| %>
     <div class="col-md-3 mb-3">
       <div class="card" style="width: 18rem;">
-        <img src="https://picsum.photos/200/300" class="card-img-top img-fluid" alt="Kitchen Image">
+      <% if kitchen.photo.attached? %>
+      <%= cl_image_tag kitchen.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+      <img src="https://picsum.photos/200/300" class="card-img-top img-fluid" alt="Kitchen Image">
+      <% end %>
         <div class="card-body">
             <p id="price">€<%= kitchen.price%>/ day</p>
           <h5 class="card-title">
