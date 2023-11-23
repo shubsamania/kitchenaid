@@ -5,6 +5,7 @@
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.input :description %>
+  <%= f.input :tag, collection: [ "Food Preparation", "Cooking Appliances", "Outdoor Cooking", "Beverage Appliances", "Specialty Appliances" ] %>
   <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
