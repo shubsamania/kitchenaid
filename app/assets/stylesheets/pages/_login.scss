@@ -1,0 +1,41 @@
+.container {
+  margin-top: 40px;
+  h2 {
+    font-weight: 700;
+  }
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-inputs input[type="radio"] {
+  margin-bottom: 10px; /* Add space between radio buttons and other inputs */
+}
+
+.form-inputs .user-type label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form-check{
+  margin-top: 20px;
+
+}
+
+.sign_link {
+  color: darkgray;
+  margin-top: 20px; /* Add space above links */
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.sign_link:hover {
+  text-decoration: underline; /* Add underline on hover for better feedback */
+  color: $dark;
+}

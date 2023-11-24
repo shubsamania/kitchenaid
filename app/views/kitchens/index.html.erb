@@ -24,14 +24,14 @@
   <%# Category 4 %>
   <%= link_to root_path(query: "Beverage_Appliances") do  %>
   <div class="category">
-    <img class="category_pic" src="<%= asset_url("grill.png")%>">
+    <img class="category_pic" src="<%= asset_url("getrank.png")%>">
     <p class="category_name link">Beverage Appliances</p>
   </div>
    <% end %>
   <%# Category 5 %>
   <%= link_to root_path(query: "Specialty_Appliances") do  %>
   <div class="category">
-    <img class="category_pic" src="<%= asset_url("grill.png")%>">
+    <img class="category_pic" src="<%= asset_url("staubsauger.png")%>">
     <p class="category_name link">Specialty Appliances</p>
   </div>
    <% end %>
@@ -41,14 +41,19 @@
 <div id="kitchens" class="row">
   <% @kitchens.each do |kitchen| %>
     <div class="col-md-3 mb-3">
+
       <div class="card" style="width: 18rem;">
-      <% if kitchen.photo.attached? %>
-      <%= cl_image_tag kitchen.photo.key, height: 300, width: 400, class: "card-img-top img-fluid", crop: :fill %>
-      <% else %>
-      <img src="https://picsum.photos/200/300" class="card-img-top img-fluid" alt="Kitchen Image">
-      <% end %>
+        <% if kitchen.photo.attached? %>
+          <%= cl_image_tag kitchen.photo.key, height: 300, width: 400, class: "card-img-top img-fluid", crop: :fill %>
+        <% else %>
+          <img src="https://picsum.photos/200/300" class="card-img-top img-fluid" alt="Kitchen Image">
+        <% end %>
+
         <div class="card-body">
-            <p id="price">€<%= kitchen.price%>/ day</p>
+          <div class="price-rating">
+            <p> <%= "★" * kitchen.average_rating.to_i %> </p>
+            <p id="price">€<%= kitchen.price%>/ day </p>
+          </div>
           <h5 class="card-title">
             <%= link_to kitchen.name, kitchen, style: "color: black", class: "text-decoration-none" %>
           </h5>
