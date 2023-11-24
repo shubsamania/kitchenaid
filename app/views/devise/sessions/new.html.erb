@@ -10,8 +10,8 @@
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
 
-    <%= f.input :user_type, as: :radio_buttons, collection: { "...as an owner" => true, "...as a user" => false }, label: "I am loggin in ..." %>
-
+<%#     <%= f.input :user_type, as: :radio_buttons, collection: { "...as an owner" => true, "...as a user" => false }, label: "I am loggin in ..." %>
+ 
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 

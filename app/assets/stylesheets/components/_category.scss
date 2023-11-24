@@ -16,6 +16,11 @@
   align-items: center;
   width: 150px;
   height: 70px;
+
+  .category_pic {
+    width: 30px;
+    height: 30px;
+  }
 }
 .category:hover {
   border-bottom: 1px solid $very-dark; /* Adjust the color and thickness of the line as needed */
@@ -24,9 +29,4 @@
 .category_name {
   margin-bottom: 0;
   margin-top: 10px;
-}
-
-.category_pic {
-  width: 30px;
-  height: 30px;
 }
