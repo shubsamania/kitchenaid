@@ -3,7 +3,7 @@
   <h1>hey there <%= current_user.first_name.downcase %> 🧑‍🍳</h1>
 
 <div class="background">
-  <div>
+  <div class="bookings_conainer">
     <h4>Your current bookings:</h4>
     <% @bookings.each do |booking| %>
       <div class="current-container">
@@ -11,23 +11,21 @@
           <%= cl_image_tag booking.kitchen.photo.key, width: 60, height: 60%>
           <p id="kitchen-name"> <%= booking.kitchen.name %> </p>
         </div>
-        <p>You have <%= booking.calculate_days_left %> days left</p>
+        <p>You have <strong><%= booking.calculate_days_left %></strong> days left</p>
       </div>
     <%end%>
   </div>
-  <div>
+  <div class="items_conainer">
     <h4>Your kitchen appliances:</h4>
     <% @kitchens.each do |kitchen| %>
       <div class="items-container">
         <div class="d-flex align-items-center justify-content-between">
           <%= cl_image_tag kitchen.photo.key, width: 60, height: 60%>
           <p id="kitchen-name"><%= kitchen.name %></p>
-          <%= link_to "✍️", dashboard_path,
-          data: {turbo_method: :edit} %>
-          <%= link_to "🗑️", dashboard_path,
-          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+          <%= link_to "✎", edit_kitchen_path(kitchen), class:"link" %>
+          <%# %= button_to "🗑️", kitchen, class: "link" %>
         </div>
-      </div>
-    <% end %>
   </div>
+    <% end %>
 </div>
