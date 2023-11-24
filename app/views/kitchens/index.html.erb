@@ -1,32 +1,40 @@
 <%# Categories %>
 <div class="categories col-6">
   <%# Category 1 %>
-  <%= link_to root_path(query: "food_prep") do  %>
+  <%= link_to root_path(query: "Food_Preparation") do  %>
     <div class="category">
       <img class="category_pic" src="<%= asset_url("backen.png")%>">
       <p class="category_name link">Food Preparation</p>
     </div>
   <% end %>
   <%# Category 2 %>
+  <%= link_to root_path(query: "Cooking_Appliances") do  %>
   <div class="category">
     <img class="category_pic" src="<%= asset_url("gerat.png")%>">
     <p class="category_name link">Cooking Appliances</p>
   </div>
+   <% end %>
   <%# Category 3 %>
+  <%= link_to root_path(query: "Outdoor_Cooking") do  %>
   <div class="category">
     <img class="category_pic" src="<%= asset_url("grill.png")%>">
     <p class="category_name link">Outdoor Cooking</p>
   </div>
+   <% end %>
   <%# Category 4 %>
+  <%= link_to root_path(query: "Beverage_Appliances") do  %>
   <div class="category">
     <img class="category_pic" src="<%= asset_url("grill.png")%>">
     <p class="category_name link">Beverage Appliances</p>
   </div>
+   <% end %>
   <%# Category 5 %>
+  <%= link_to root_path(query: "Specialty_Appliances") do  %>
   <div class="category">
     <img class="category_pic" src="<%= asset_url("grill.png")%>">
     <p class="category_name link">Specialty Appliances</p>
   </div>
+   <% end %>
 </div>
 
 <%# Elements %>
@@ -53,6 +61,3 @@
   <% end %>
 </div>
 
-<%= link_to "Food Preperation", root_path(query: "food_prep")  %>
-<%= link_to "Cooking Appliances", root_path(query: "food_prep")  %>
-<%= link_to "Outdoor Cooking", root_path(query: "outdoor")  %>
