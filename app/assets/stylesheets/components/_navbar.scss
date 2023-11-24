@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $very-dark;
+  background: #008080;
   border-width: 80%;
   border-radius: 50px;
   margin-top: 10px;
@@ -23,5 +23,9 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  border-radius: 50%;
+}
+
+.nav-img {
   border-radius: 50%;
 }
