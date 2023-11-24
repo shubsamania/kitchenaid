@@ -28,8 +28,12 @@ class KitchensController < ApplicationController
       ratings << review.rating
     end
     sum_ratings = ratings.sum
-    number_of_ratings = ratings.count
-    @total_rating = sum_ratings / number_of_ratings
+    if @kitchen.reviews.empty?
+      @total_rating = sum_ratings / 1
+    else
+      number_of_ratings = ratings.count
+      @total_rating = sum_ratings / number_of_ratings
+    end
   end
 
   # GET /kitchens/new

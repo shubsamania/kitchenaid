@@ -1,7 +1,7 @@
 <%# Categories %>
 <div class="categories col-6">
   <%# Category 1 %>
-  <%= link_to root_path(query: "food_prep") do  %>
+  <%= link_to root_path(query: "food_prep"), class:"link" do  %>
     <div class="category">
       <img class="category_pic" src="<%= asset_url("backen.png")%>">
       <p class="category_name link">Food Preparation</p>
@@ -19,12 +19,12 @@
   </div>
   <%# Category 4 %>
   <div class="category">
-    <img class="category_pic" src="<%= asset_url("grill.png")%>">
+    <img class="category_pic" src="<%= asset_url("getrank.png")%>">
     <p class="category_name link">Beverage Appliances</p>
   </div>
   <%# Category 5 %>
   <div class="category">
-    <img class="category_pic" src="<%= asset_url("grill.png")%>">
+    <img class="category_pic" src="<%= asset_url("staubsauger.png")%>">
     <p class="category_name link">Specialty Appliances</p>
   </div>
 </div>
