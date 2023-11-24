@@ -16,7 +16,10 @@ Booking.destroy_all
 Kitchen.destroy_all
 User.destroy_all
 
-user = User.create(email: "abc@gmail.com", password: "1234567")
+user = User.new(email: "emma@gmail.com", password: "1234567", first_name: "Emma", last_name: "Preysing")
+file = URI.open("https://media.licdn.com/dms/image/D5603AQFviLMSU6nNzg/profile-displayphoto-shrink_800_800/0/1699914603422?e=1706140800&v=beta&t=-_nEa2-rLt75uyGXEdjPwaxbC3-ANx_wEsCkXfLz6hQ")
+user.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+user.save!
 
 kitchen = Kitchen.new(name: "Ice Cream Maker", availiability: true, description: "Creates homemade ice cream, giving you control over flavors and ingredients.", tag: "Beverage_Appliances", user: user, price: rand(1..100))
 file = URI.open("https://cdn.thewirecutter.com/wp-content/media/2021/06/icecreammaker-2048px-6533-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024")
