@@ -3,9 +3,31 @@
   <h1>hey there <%= current_user.first_name.downcase %> 🧑‍🍳</h1>
 
 <div class="background">
-  <div class="current-container">
+  <div>
+    <h4>Your current bookings:</h4>
+    <% @bookings.each do |booking| %>
+      <div class="current-container">
+        <div class="d-flex align-items-center">
+          <%= cl_image_tag booking.kitchen.photo.key, width: 60, height: 60%>
+          <p id="kitchen-name"> <%= booking.kitchen.name %> </p>
+        </div>
+        <p>You have <%= booking.calculate_days_left %> days left</p>
+      </div>
+    <%end%>
   </div>
-
-  <div class="items-container">
+  <div>
+    <h4>Your kitchen appliances:</h4>
+    <% @kitchens.each do |kitchen| %>
+      <div class="items-container">
+        <div class="d-flex align-items-center justify-content-between">
+          <%= cl_image_tag kitchen.photo.key, width: 60, height: 60%>
+          <p id="kitchen-name"><%= kitchen.name %></p>
+          <%= link_to "✍️", dashboard_path,
+          data: {turbo_method: :edit} %>
+          <%= link_to "🗑️", dashboard_path,
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
