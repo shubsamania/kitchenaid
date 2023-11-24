@@ -4,7 +4,7 @@
 
 .item-container{
   margin-top: 20px;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: white;
   padding: 10px;
   display: flex;
@@ -38,6 +38,7 @@ h3 {
   height: 1px; /* Set the height of the divider */
   background: linear-gradient(to right, transparent, #e0e0e0, transparent); /* Use a linear gradient for the fade effect */
   margin: 5px 0;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -57,6 +58,7 @@ h3 {
 }
 
 .info-container{
+  margin-top: 20px;
   display: flex;
   // flex-direction: column;
   border-radius: 20px;
@@ -69,9 +71,9 @@ h3 {
 
 .booking-container{
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 6px;
   margin-bottom: 20px;
   margin: 10px;
 }
@@ -91,10 +93,12 @@ h3 {
   .rating{
     margin-top: 5px;
     margin-bottom: 0px;
+    margin-left: 10px;
   }
 
   .content{
     margin-top: 0px;
     margin-bottom: 40px;
+    margin-left: 10px;
   }
 }

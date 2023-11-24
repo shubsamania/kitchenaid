@@ -9,6 +9,9 @@
     <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
+
+    <%= f.input :user_type, as: :radio_buttons, collection: { "I am an owner" => true, "I am a user" => false }, label: "Select your role" %>
+
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
