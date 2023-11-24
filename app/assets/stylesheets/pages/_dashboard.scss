@@ -1,14 +1,35 @@
 .background {
+  margin-top: 20px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  //justify-content: space-around;
   border-radius: 20px;
-  padding: 20px;
-  background-color: #EFE1D1;
+  padding: 10px;
+
+  .bookings_conainer{
+    margin-right: 300px;
+    font-family: 'Libre Baskerville', serif;
+  }
+
+  .items_conainer{
+    font-family: 'Libre Baskerville', serif;
+  }
+
+  h4 {
+    font-family: 'Libre Baskerville', serif;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+  p {
+    margin-top: 30px;
+  }
 }
 
 .current-container {
-  border: 2px solid black;
+  font-family: 'Libre Baskerville', serif;
+  border: 2px solid lightgray;
   padding: 10px;
   margin: 10px;
   border-radius: 20px;
@@ -16,13 +37,15 @@
 
 
 .items-container{
+  font-family: 'Libre Baskerville', serif;
   border-radius: 20px;
   padding: 20px;
   margin: 10px;
-  border: 2px solid black;
+  border: 2px solid lightgray;
 }
 
 #kitchen-name{
+  font-family: 'Libre Baskerville', serif;
   margin-top: 8px;
   margin-left: 8px;
 }
