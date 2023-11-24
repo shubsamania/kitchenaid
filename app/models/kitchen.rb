@@ -15,7 +15,7 @@ class Kitchen < ApplicationRecord
     else
       sum_ratings = ratings.sum
       number_of_ratings = ratings.count
-      sum_ratings.to_f / number_of_ratings
+      (sum_ratings.to_f / number_of_ratings).round(1)
     end
   end
 end

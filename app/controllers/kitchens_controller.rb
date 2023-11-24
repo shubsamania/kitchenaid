@@ -4,7 +4,7 @@ class KitchensController < ApplicationController
 
   # GET /kitchens
   def index
-    @kitchens = Kitchen.all
+    @kitchens = Kitchen.all.order(:id)
     @booking = Booking.new
     # The `geocoded` scope filters only flats with coordinates
     # @markers = @kitchens.geocoded.map do |kitchen|
