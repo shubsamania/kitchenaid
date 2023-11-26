@@ -59,30 +59,6 @@ kitchen.save!
 # review = Review.new(content: "Love making fresh pasta! Sturdy build and creates restaurant-quality noodles effortlessly.", rating: 4, booking_id: booking.id)
 # review.save!
 
-kitchen = Kitchen.new(name: "Cotton Candy Machine", availiability: true, description: "Spins sugar into fluffy cotton candy, a hit at parties or for sweet treats.", tag: "Specialty_Appliances", user: user, price: rand(1..100))
-file = URI.open("https://images.thdstatic.com/productImages/44465477-3002-44b6-8abc-1ecdd8ee1884/svn/pink-vevor-cotton-candy-machines-mhtjlj00000000001v1-64_600.jpg")
-kitchen.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-kitchen.save!
-
-# review = Review.new(content: "Brings carnival fun home! Makes fluffy cotton candy easily, a hit at parties.", rating: 4, booking_id: booking.id)
-# review.save!
-
-kitchen = Kitchen.new(name: "Ice Cream Maker", availiability: true, description: "Creates homemade ice cream, giving you control over flavors and ingredients.", tag: "Beverage_Appliances", user: user, price: rand(1..100))
-file = URI.open("https://cdn.thewirecutter.com/wp-content/media/2021/06/icecreammaker-2048px-6533-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024")
-kitchen.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
-kitchen.save!
-
-# review = Review.new(content: "Fantastic for homemade treats! Simple operation and churns out creamy ice cream in no time.", rating: 4, booking_id: booking.id)
-# review.save!
-
-kitchen = Kitchen.new(name: "Bread Maker", availiability: true, description: "Automates bread baking, allowing you to make fresh bread easily at home.", tag: "Outdoor_Cooking", user: user, price: rand(1..100))
-file = URI.open("https://static01.nyt.com/images/2023/02/01/multimedia/01bread-maker1-lgvm/30bread-maker1-lgvm-videoSixteenByNineJumbo1600.jpg")
-kitchen.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
-kitchen.save!
-
-# review = Review.new(content: "This bread maker is a game-changer! Easy to use, makes delicious bread, and the aroma fills the house.", rating: 4, booking_id: booking.id)
-# review.save!
-
 
 kitchen = Kitchen.new(name: "Food Dehydrator", availiability: true, description: "Removes moisture from foods to preserve them or create healthy snacks like dried fruits or jerky.", tag: "Outdoor_Cooking", user: user, price: rand(1..100))
 file = URI.open("https://www.sencor.com/Sencor/media/content/products/abf81e6e-e34b-4304-8f41-3f1f0816c8c5.jpg")
@@ -154,4 +130,28 @@ kitchen.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 kitchen.save!
 
 # review = Review.new(content: "Grills perfect sandwiches! Versatile for various pressed meals, a kitchen essential.", rating: 4, booking_id: booking.id)
+# review.save!
+
+kitchen = Kitchen.new(name: "Cotton Candy Machine", availiability: true, description: "Spins sugar into fluffy cotton candy, a hit at parties or for sweet treats.", tag: "Specialty_Appliances", user: user, price: rand(1..100))
+file = URI.open("https://images.thdstatic.com/productImages/44465477-3002-44b6-8abc-1ecdd8ee1884/svn/pink-vevor-cotton-candy-machines-mhtjlj00000000001v1-64_600.jpg")
+kitchen.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+kitchen.save!
+
+# review = Review.new(content: "Brings carnival fun home! Makes fluffy cotton candy easily, a hit at parties.", rating: 4, booking_id: booking.id)
+# review.save!
+
+kitchen = Kitchen.new(name: "Ice Cream Maker", availiability: true, description: "Creates homemade ice cream, giving you control over flavors and ingredients.", tag: "Beverage_Appliances", user: user, price: rand(1..100))
+file = URI.open("https://cdn.thewirecutter.com/wp-content/media/2021/06/icecreammaker-2048px-6533-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024")
+kitchen.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+kitchen.save!
+
+# review = Review.new(content: "Fantastic for homemade treats! Simple operation and churns out creamy ice cream in no time.", rating: 4, booking_id: booking.id)
+# review.save!
+
+kitchen = Kitchen.new(name: "Bread Maker", availiability: true, description: "Automates bread baking, allowing you to make fresh bread easily at home.", tag: "Outdoor_Cooking", user: user, price: rand(1..100))
+file = URI.open("https://static01.nyt.com/images/2023/02/01/multimedia/01bread-maker1-lgvm/30bread-maker1-lgvm-videoSixteenByNineJumbo1600.jpg")
+kitchen.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+kitchen.save!
+
+# review = Review.new(content: "This bread maker is a game-changer! Easy to use, makes delicious bread, and the aroma fills the house.", rating: 4, booking_id: booking.id)
 # review.save!
