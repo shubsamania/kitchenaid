@@ -1,31 +1,59 @@
-<%= link_to "← go back", kitchens_path, class:"link" %>
+<div class="content">
+  <%= link_to "← go back", kitchens_path, class:"link" %>
 
-  <h1>hey there <%= current_user.first_name.downcase %> 🧑‍🍳</h1>
+    <h1>Hi, <%= current_user.first_name.downcase %> </h1>
 
-<div class="background">
-  <div class="bookings_conainer">
-    <h4>Your current bookings:</h4>
-    <% @bookings.each do |booking| %>
-      <div class="current-container">
-        <div class="d-flex align-items-center">
-          <%= cl_image_tag booking.kitchen.photo.key, width: 60, height: 60%>
-          <p id="kitchen-name"> <%= booking.kitchen.name %> </p>
+  <div class="background">
+    <div class="bookings_conainer">
+      <h4>Your current bookings</h4>
+      <% @bookings.each do |booking| %>
+        <div class="current-container">
+          <div class="d-flex align-items-center">
+            <%= cl_image_tag booking.kitchen.photo.key, width: 60, height: 60 %>
+            <p id="kitchen-name">
+              <%= booking.kitchen.name %>
+            </p>
+          </div>
+          <div>
+            <p>
+              <%= booking.kitchen.description %>
+            </p>
+          </div>
+          <div class="days_left">
+            You have
+             <%= booking.calculate_days_left %>
+            days left
+          </div>
         </div>
-        <p>You have <strong><%= booking.calculate_days_left %></strong> days left</p>
-      </div>
-    <%end%>
-  </div>
-  <div class="items_conainer">
-    <h4>Your kitchen appliances:</h4>
-    <% @kitchens.each do |kitchen| %>
-      <div class="items-container">
-        <div class="d-flex align-items-center justify-content-between">
-          <%= cl_image_tag kitchen.photo.key, width: 60, height: 60%>
-          <p id="kitchen-name"><%= kitchen.name %></p>
+        <%= button_to "Destroy this kitchen", @kitchen, method: :delete %>
+      <%end%>
+    </div>
 
-          <%= link_to "✎", edit_kitchen_path(kitchen), class:"link" %>
-          <%# %= button_to "🗑️", kitchen, class: "link" %>
-        </div>
+    <div class="items_container">
+  <h4>Your own kitchen appliances</h4>
+
+  <table class="kitchen-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Reviews</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @kitchens.each do |kitchen| %>
+        <tr>
+          <td><%= kitchen.name %></td>
+          <td><%= kitchen.description %></td>
+          <td><%= kitchen.average_rating %></td>
+          <td><%= link_to "✎", edit_kitchen_path(kitchen), class: "link" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
   </div>
-    <% end %>
 </div>
