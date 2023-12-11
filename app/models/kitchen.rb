@@ -11,7 +11,7 @@ class Kitchen < ApplicationRecord
       ratings << review.rating
     end
     if ratings.empty?
-      "★"
+      "No ratings"
     else
       sum_ratings = ratings.sum
       number_of_ratings = ratings.count

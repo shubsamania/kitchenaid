@@ -1,51 +1,71 @@
 .background {
   margin-top: 20px;
   width: 100%;
-  display: flex;
+  //display: flex;
   //justify-content: space-around;
-  border-radius: 20px;
-  padding: 10px;
+  padding: 5px;
 
-  .bookings_conainer{
-    margin-right: 300px;
+  .bookings_container{
     font-family: 'Libre Baskerville', serif;
   }
 
-  .items_conainer{
+  .items_container{
+    margin-top: 50px;
     font-family: 'Libre Baskerville', serif;
+    border-radius: 10px;
   }
 
   h4 {
     font-family: 'Libre Baskerville', serif;
+    margin-bottom: 10px;
   }
 
   img {
-    border-radius: 50%;
+    width: 100px;
+    border-radius: 30px;
   }
-  p {
-    margin-top: 30px;
+
+  .current-container {
+    font-family: 'Libre Baskerville', serif;
+    border-radius: 12px;
+    padding: 15px;
+
+    p{
+      margin-top: 10px;
+    }
+
+    #kitchen-name{
+      margin-left: 15px;
+      margin-bottom: 0px;
+      align-items: start;
+    }
   }
 }
 
-.current-container {
-  font-family: 'Libre Baskerville', serif;
-  border: 2px solid lightgray;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 20px;
+.days_left{
+  border: 1px solid lightgray;
+  border-radius: 12px;
+  padding: 15px;
+  width: fit-content;
+
 }
 
+.kitchen-table{
+  tr {
+    border-bottom:  1px solid $light;
+  }
 
-.items-container{
-  font-family: 'Libre Baskerville', serif;
-  border-radius: 20px;
-  padding: 20px;
-  margin: 10px;
-  border: 2px solid lightgray;
-}
+  td {
+    padding: 15px;
+  }
 
-#kitchen-name{
-  font-family: 'Libre Baskerville', serif;
-  margin-top: 8px;
-  margin-left: 8px;
+  thead {
+    background-color: $very-light;
+    border-radius: 20px;
+
+    th {
+      padding: 15px;
+    }
+  }
+
 }
