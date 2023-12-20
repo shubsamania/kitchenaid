@@ -11,5 +11,4 @@ class Booking < ApplicationRecord
     days_left = (end_date - current).to_i
     return days_left
   end
-
 end
