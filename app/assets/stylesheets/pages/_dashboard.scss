@@ -5,54 +5,34 @@
   //justify-content: space-around;
   padding: 5px;
 
-  .bookings_container{
-    font-family: 'Libre Baskerville', serif;
-  }
-
-  .items_container{
-    margin-top: 50px;
-    font-family: 'Libre Baskerville', serif;
-    border-radius: 10px;
-  }
-
-  h4 {
-    font-family: 'Libre Baskerville', serif;
-    margin-bottom: 10px;
-  }
-
   img {
     width: 100px;
     border-radius: 30px;
   }
 
-  .current-container {
+  h4 {
+    font-size: 20px;
     font-family: 'Libre Baskerville', serif;
-    border-radius: 12px;
-    padding: 15px;
-
-    p{
-      margin-top: 10px;
-    }
-
-    #kitchen-name{
-      margin-left: 15px;
-      margin-bottom: 0px;
-      align-items: start;
-    }
+    margin-bottom: 20px;
+    margin-top: 30px;
   }
-}
 
-.days_left{
-  border: 1px solid lightgray;
-  border-radius: 12px;
-  padding: 15px;
-  width: fit-content;
+  p {
+    margin-top: 10px;
+  }
 
+  .current-container {
+    margin-top: 50px;
+    font-family: 'Libre Baskerville', serif;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 15px;
+  }
 }
 
 .kitchen-table{
   tr {
-    border-bottom:  1px solid $light;
+    border-bottom:  2px dotted $very-light;
   }
 
   td {
@@ -67,5 +47,4 @@
       padding: 15px;
     }
   }
-
 }
